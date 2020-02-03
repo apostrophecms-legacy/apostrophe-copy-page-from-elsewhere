@@ -1,0 +1,29 @@
+{% extends "apostrophe-modal:base.html" %}
+{% import "apostrophe-modal:macros.html" as modals %}
+{% import "apostrophe-schemas:macros.html" as schemas %}
+{% import 'apostrophe-ui:components/buttons.html' as buttons with context %}
+
+{%- block modalClass -%}
+  apos-ui-modal-no-sidebar
+{%- endblock -%}
+
+{% block label %}
+  {{ __('Select Page To Copy') }}
+{% endblock %}
+
+{% block instructions %}
+  {{ __("You may select any page that you can view to be copied, provided the page type is allowed at the destination.") }}
+{% endblock %}
+
+{% block controls %}
+  {{ buttons.minor('Cancel', { action: 'cancel' }) }}
+  {{ buttons.major('Copy', { action: 'save' }) }}
+{% endblock %}
+
+{% block body %}
+  <div data-schema-fields>
+    {{ schemas.fields(data.schema, { tabs: false }) }}
+  </div>
+{% endblock %}
+
+{% block footerContainer %}{% endblock %}

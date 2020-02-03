@@ -1,0 +1,25 @@
+{
+  "name": "apostrophe-copy-page-from-elsewhere",
+  "version": "2.0.0",
+  "description": "Allows you to copy a page from elsewhere in the page tree, unlike the standard \"copy page\" feature which copies the current page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apostrophecms/apostrophe-copy-page-from-elsewhere.git"
+  },
+  "keywords": [
+    "apostrophecms"
+  ],
+  "author": "Apostrophe Technologies",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apostrophecms/apostrophe-copy-page-from-elsewhere/issues"
+  },
+  "homepage": "https://github.com/apostrophecms/apostrophe-copy-page-from-elsewhere#readme",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}
