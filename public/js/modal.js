@@ -15,7 +15,7 @@ apos.define('apostrophe-copy-page-from-elsewhere-modal', {
         copy
       ], function(err) {
         if (err) {
-          apos.notify('The page could not be copied. That page type might not be allowed in this location.', { type: 'error' });
+          apos.notify('The page could not be copied. That page type might not be allowed in this location, or you may not have permission.', { type: 'error' });
           return callback(err);
         }
         window.location.href = result._url + '#apos-copied-page-from-elsewhere';
