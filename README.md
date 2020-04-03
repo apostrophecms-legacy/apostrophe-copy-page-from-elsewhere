@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/apostrophecms/apostrophe-copy-page-from-elsewhere/tree/master.svg?style=svg)](https://circleci.com/gh/apostrophecms/apostrophe-copy-page-from-elsewhere/tree/master)
+
 # apostrophe-copy-page-from-elsewhere
 
 ## Why

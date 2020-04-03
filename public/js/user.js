@@ -19,7 +19,7 @@ apos.define('apostrophe-pages', {
       if (location.hash === '#apos-copied-page-from-elsewhere') {
         setImmediate(function() {
           self.pageSettings();
-          history.replaceState(null, null, ' ');
+          window.history.replaceState(null, null, ' ');
         });
       }
     };

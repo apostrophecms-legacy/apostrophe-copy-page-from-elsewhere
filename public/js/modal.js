@@ -3,10 +3,12 @@ apos.define('apostrophe-copy-page-from-elsewhere-modal', {
   source: 'copy-page-from-elsewhere-modal',
   construct: function(self, options) {
     self.schema = self.options.schema;
+
     self.beforeShow = function(callback) {
       // We don't have an existing setting but we do need to enable the UI for the various fields
       return apos.schemas.populate(self.$el.find('[data-schema-fields]'), self.schema, {}, callback);
-    },
+    };
+
     self.saveContent = function(callback) {
       var data = {};
       var result;
@@ -20,9 +22,11 @@ apos.define('apostrophe-copy-page-from-elsewhere-modal', {
         }
         window.location.href = result._url + '#apos-copied-page-from-elsewhere';
       });
+
       function convert(callback) {
         return apos.schemas.convert(self.$el.find('[data-schema-fields]'), self.schema, data, {}, callback);
       }
+
       function copy(callback) {
         return self.api('copy-page-from-elsewhere', {
           peerId: apos.pages.page._id,
