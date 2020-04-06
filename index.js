@@ -19,7 +19,7 @@ module.exports = {
       self.pushAsset('script', 'user', { when: 'user' });
       self.pushAsset('script', 'modal', { when: 'user' });
     };
-    var superSendPage = self.sendPage;    
+    var superSendPage = self.sendPage;
     self.sendPage = function(req, template, data) {
       if (!(data.contextMenu && self.apos.permissions.can(req, 'edit', req.data.page))) {
         return superSendPage(req, template, data);
@@ -58,7 +58,8 @@ module.exports = {
         const parent = _.last(peer._ancestors) || peer;
         const copy = await self.apos.pages.find(req, {
           _id: copyId
-        }).permission(self.options.copyFromElsewhereWithoutEditPermission ? 'view': 'edit').toObject();
+        }).permission(self.options.copyFromElsewhereWithoutEditPermission
+          ? 'view' : 'edit').toObject();
         if (!copy) {
           self.apos.utils.error('no copy source');
           throw 'invalid';
@@ -88,7 +89,7 @@ module.exports = {
         // Copy top-level area properties which are not part of the schema
         // (introduced via apos.area)
         _.each(copy, function (val, key) {
-          // Don't let typeof(null) === 'object' bite us
+          // Don't let typeof (null) === 'object' bite us
           if (val && (typeof (val) === 'object') && (val.type === 'area')) {
             page[key] = val;
           }
